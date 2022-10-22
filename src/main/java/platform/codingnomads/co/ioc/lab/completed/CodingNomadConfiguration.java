@@ -32,4 +32,11 @@ public class CodingNomadConfiguration {
     public SoundSystem soundSystem() {
         return SoundSystem.builder().type("Speakers").brand("Bose").build();
     }
+
+    @Bean
+    public Printer printer() { return Printer.builder().name("HP").type("Laser").build(); }
+
+    @Bean
+    public FloppyDisk floppyDisk() { return FloppyDisk.builder().name("IBM").size(5.25).build(); }
+
 }
