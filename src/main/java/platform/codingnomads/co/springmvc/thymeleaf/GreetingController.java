@@ -11,9 +11,19 @@ public class GreetingController {
 
     @GetMapping({ "/", "/index" })
     public String index(Model model) {
-        model.addAttribute("name", "Spring Developer!");
-        return "greeting"; 
+        model.addAttribute("name", "Spring Develper!");
+        return "greeting";
     }
+
+    @GetMapping("/practice")
+    public String practice(Model model) {
+        model.addAttribute("name", "Socrates");
+        model.addAttribute("name2", "Bobby Fisher");
+        model.addAttribute("name3", "Alfred E. Newman");
+        return "practice";
+        }
+
+
 
     @GetMapping("/subjects")
     public String subjects(Model model) {
