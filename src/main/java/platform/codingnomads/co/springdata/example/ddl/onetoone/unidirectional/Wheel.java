@@ -5,11 +5,11 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cars")
+@Table(name = "wheels")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Car {
+public class Wheel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,12 +18,9 @@ public class Car {
     @Column(nullable = false)
     private String brand;
 
-    @Column(name = "horsepower")
-    private String horsepower;
+    @Column(name = "radius")
+    private double radius;
 
-   @OneToOne
-    private Wheel wheel;
-
-
-
+    @OneToOne(mappedBy = "wheel")
+    private Car car;
 }
