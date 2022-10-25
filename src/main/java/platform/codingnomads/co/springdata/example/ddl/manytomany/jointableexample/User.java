@@ -1,6 +1,8 @@
 package platform.codingnomads.co.springdata.example.ddl.manytomany.jointableexample;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -9,27 +11,27 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Post {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, updatable = false)
-    private String username;
+    @Column(nullable = false)
+    private String first_name;
 
     @Column(nullable = false)
-    private String content;
+    private String last_name;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "post_id", nullable = false)
-    private Set<Comment> comments;
+    @Column(nullable = false)
+    private int age;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
-            name = "post_location_join_table",
+            //change join table name
+            name = "user_image_join_table"
             //specify a column named location_latitude referencing the latitude column in the locations table
-            inverseJoinColumns = @JoinColumn(name = "location_latitude", referencedColumnName = "latitude")
+//            inverseJoinColumns = @JoinColumn(name = "user_image", referencedColumnName = "image")
     )
-    private Set<Location> locations;
+    private Set<Image> images;
 }
