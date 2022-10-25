@@ -28,5 +28,6 @@ public class Driver {
             //All save/persist actions will be propagated through to the Car.
             cascade = CascadeType.PERSIST
     )
-    private Car car;
+
+    private Helmet helmet;
 }
