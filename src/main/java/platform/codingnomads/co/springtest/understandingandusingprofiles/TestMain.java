@@ -3,6 +3,7 @@ package platform.codingnomads.co.springtest.understandingandusingprofiles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
@@ -31,4 +32,12 @@ public class TestMain implements CommandLineRunner {
                 .sugar(true)
                 .build());
     }
+
+    @Bean
+    @Profile("production")
+    public static void simplyPrint() {
+
+        System.out.println("It's just a test, nothing to see here!");
+    }
+
 }
