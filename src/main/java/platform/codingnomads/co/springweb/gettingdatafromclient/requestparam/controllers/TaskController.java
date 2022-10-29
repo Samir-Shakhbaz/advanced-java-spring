@@ -24,6 +24,23 @@ public class TaskController {
         return "ID: " + taskId;
     }
 
+    @GetMapping(value = "/my-search", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String mySearch(@RequestParam(name = "number") Long taskId) {
+        return "number: " + taskId;
+    }
+
+    @GetMapping(value = "/name-not-required", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Task nameNotRequired(@RequestParam(name = "name", required = false, defaultValue = "incognito") String taskName) {
+        return Task.builder().name(taskName).build();
+    }
+
+    @GetMapping(value = "/many-requests-in-one", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Task> manyRequestsInOne(@RequestParam(name = "names") List<String> names) {
+        return IntStream.range(0, names.size())
+                .mapToObj(i -> Task.builder().id((long) i).name(names.get(i)).build())
+                .collect(Collectors.toList());
+    }
+
     @GetMapping(value = "/request-param-optional", produces = MediaType.APPLICATION_JSON_VALUE)
     public Task getTaskWithOptionalRequestPram(@RequestParam(name = "id", required = false) Long taskId) {
         if (taskId != null){
