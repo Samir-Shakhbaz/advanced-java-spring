@@ -34,7 +34,7 @@ public class TestMain implements CommandLineRunner {
     }
 
     @Bean
-    @Profile("production")
+    @Profile("test")
     public static void simplyPrint() {
 
         System.out.println("It's just a test, nothing to see here!");
