@@ -1,4 +1,4 @@
-package platform.codingnomads.co.springmvc.customerwebsite.config;
+package platform.codingnomads.co.springmvc.model.customerwebsite.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,8 +1,7 @@
-package platform.codingnomads.co.springmvc.customerwebsite.repository;
+package platform.codingnomads.co.springmvc.model.customerwebsite.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.Customer;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.RentalCar;
+import platform.codingnomads.co.springmvc.model.customerwebsite.domain.RentalCar;
 
 public interface CarRepository extends JpaRepository<RentalCar, Long> {
 

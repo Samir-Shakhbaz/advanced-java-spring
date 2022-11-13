@@ -1,13 +1,13 @@
-package platform.codingnomads.co.springmvc.customerwebsite;
+package platform.codingnomads.co.springmvc.model.customerwebsite;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.Customer;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.RentalCar;
-import platform.codingnomads.co.springmvc.customerwebsite.service.CarService;
-import platform.codingnomads.co.springmvc.customerwebsite.service.CustomerService;
+import platform.codingnomads.co.springmvc.model.customerwebsite.domain.Customer;
+import platform.codingnomads.co.springmvc.model.customerwebsite.domain.RentalCar;
+import platform.codingnomads.co.springmvc.model.customerwebsite.service.CarService;
+import platform.codingnomads.co.springmvc.model.customerwebsite.service.CustomerService;
 
 import java.util.Arrays;
 

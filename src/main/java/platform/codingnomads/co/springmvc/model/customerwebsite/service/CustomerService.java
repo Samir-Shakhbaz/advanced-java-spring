@@ -1,6 +1,6 @@
-package platform.codingnomads.co.springmvc.customerwebsite.service;
+package platform.codingnomads.co.springmvc.model.customerwebsite.service;
 
-import platform.codingnomads.co.springmvc.customerwebsite.domain.Customer;
+import platform.codingnomads.co.springmvc.model.customerwebsite.domain.Customer;
 
 import java.util.List;
 

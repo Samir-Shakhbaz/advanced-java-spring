@@ -1,11 +1,11 @@
-package platform.codingnomads.co.springmvc.customerwebsite.service;
+package platform.codingnomads.co.springmvc.model.customerwebsite.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.Customer;
-import platform.codingnomads.co.springmvc.customerwebsite.repository.CustomerRepository;
+import platform.codingnomads.co.springmvc.model.customerwebsite.domain.Customer;
+import platform.codingnomads.co.springmvc.model.customerwebsite.repository.CustomerRepository;
 
 import java.util.List;
 

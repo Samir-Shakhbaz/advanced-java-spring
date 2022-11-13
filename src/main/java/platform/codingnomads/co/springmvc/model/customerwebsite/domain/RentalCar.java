@@ -1,4 +1,4 @@
-package platform.codingnomads.co.springmvc.customerwebsite.domain;
+package platform.codingnomads.co.springmvc.model.customerwebsite.domain;
 
 import lombok.*;
 

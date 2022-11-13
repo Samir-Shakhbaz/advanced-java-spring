@@ -1,11 +1,10 @@
-package platform.codingnomads.co.springmvc.customerwebsite.service;
+package platform.codingnomads.co.springmvc.model.customerwebsite.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.Customer;
-import platform.codingnomads.co.springmvc.customerwebsite.domain.RentalCar;
-import platform.codingnomads.co.springmvc.customerwebsite.repository.CarRepository;
+import platform.codingnomads.co.springmvc.model.customerwebsite.domain.RentalCar;
+import platform.codingnomads.co.springmvc.model.customerwebsite.repository.CarRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
