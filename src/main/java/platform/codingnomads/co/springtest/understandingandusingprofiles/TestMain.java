@@ -40,4 +40,10 @@ public class TestMain implements CommandLineRunner {
         System.out.println("It's just a test, nothing to see here!");
     }
 
+    @Bean
+    @Profile("!test")
+    public static void print(){
+        System.out.println("hello testing!");
+    }
+
 }
